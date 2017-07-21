@@ -42,7 +42,7 @@ func (client *Client) Init() (err error) {
 	return
 }
 
-// Close must be called to deregister register service and close connection to
+// Close must be called to deregister the service and close connection to
 // Consul
 func (client *Client) Close() (err error) {
 	if err = client.Agent().ServiceDeregister(client.Service.ID); err != nil {
